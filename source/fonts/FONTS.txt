@@ -1,0 +1,18 @@
+Fonts bundled with this travel journal (all SIL Open Font License 1.1):
+
+- Bodoni Moda — The Bodoni Moda Project Authors (https://github.com/indestructible-type/Bodoni)
+- Playfair Display — Claus Eggers Sørensen / typographies.fr
+- Cormorant Garamond — Christian Thalmann (Catharsis Fonts)
+- Oswald — Vernon Adams, Kalapi Gajjar, Cyreal
+- Bebas Neue — Fontfabric (Rafaeleanion / Dharma Type distribution on Google Fonts)
+- Great Vibes — TypeSETit, Robert E. Leuschke
+- Pinyon Script — Nicole Fally / typographies.fr
+
+The full SIL Open Font License 1.1 text is in OFL.txt in this folder.
+These fonts are embedded so the album works offline.
+
+Added in v2:
+- Special Elite — Astigmatic (Apache License 2.0)
+- Courier Prime — Quote-Unquote Apps (SIL OFL 1.1)
+- Caveat — Impallari Type (SIL OFL 1.1)
+- Homemade Apple — Font Diner (Apache License 2.0)

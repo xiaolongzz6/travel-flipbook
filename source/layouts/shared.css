@@ -1,0 +1,160 @@
+@font-face {
+  font-family: "Bodoni Moda";
+  font-style: normal;
+  font-weight: 400 900;
+  font-display: block;
+  src: url("../fonts/BodoniModa-VariableFont_opsz,wght.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Bodoni Moda";
+  font-style: italic;
+  font-weight: 400 900;
+  font-display: block;
+  src: url("../fonts/BodoniModa-Italic-VariableFont_opsz,wght.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 400 900;
+  font-display: block;
+  src: url("../fonts/PlayfairDisplay-VariableFont_wght.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Playfair Display";
+  font-style: italic;
+  font-weight: 400 900;
+  font-display: block;
+  src: url("../fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Cormorant Garamond";
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: block;
+  src: url("../fonts/CormorantGaramond-VariableFont_wght.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Cormorant Garamond";
+  font-style: italic;
+  font-weight: 300 700;
+  font-display: block;
+  src: url("../fonts/CormorantGaramond-Italic-VariableFont_wght.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 200 700;
+  font-display: block;
+  src: url("../fonts/Oswald-VariableFont_wght.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Great Vibes";
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url("../fonts/GreatVibes-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Pinyon Script";
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url("../fonts/PinyonScript-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Bebas Neue";
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url("../fonts/BebasNeue-Regular.ttf") format("truetype");
+}
+
+@font-face { font-family: "Special Elite"; src: url("../fonts/SpecialElite-Regular.ttf") format("truetype"); font-display: block; }
+@font-face { font-family: "Courier Prime"; src: url("../fonts/CourierPrime-Regular.ttf") format("truetype"); font-display: block; }
+@font-face { font-family: "Courier Prime"; font-style: italic; src: url("../fonts/CourierPrime-Italic.ttf") format("truetype"); font-display: block; }
+@font-face { font-family: "Caveat"; font-weight: 400 700; src: url("../fonts/Caveat-VariableFont_wght.ttf") format("truetype"); font-display: block; }
+@font-face { font-family: "Homemade Apple"; src: url("../fonts/HomemadeApple-Regular.ttf") format("truetype"); font-display: block; }
+
+/* =========================================================
+   Travel Journal v2 — scrapbook collage system
+   每个元素都是绝对定位的“图层”，位置在 layouts/collage.py 里写。
+   ========================================================= */
+:root {
+  --font-display: "Bodoni Moda", "Playfair Display", Georgia, serif;
+  --font-body: "Cormorant Garamond", Georgia, serif;
+  --font-type: "Special Elite", "Courier Prime", "Courier New", monospace;
+  --font-hand: "Homemade Apple", "Caveat", cursive;
+  --font-note: "Caveat", "Homemade Apple", cursive;
+  --font-script: "Pinyon Script", "Great Vibes", cursive;
+  --font-cjk: "Noto Serif CJK SC", "Source Han Serif SC", "Songti SC", "SimSun", serif;
+  --ink: #2b2a33;
+  --shadow: drop-shadow(0 7px 9px rgba(70, 48, 25, .26)) drop-shadow(0 1px 1.5px rgba(40, 28, 15, .28));
+  --shadow-soft: drop-shadow(0 3px 5px rgba(70, 48, 25, .22));
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; width: 2400px; height: 1600px; overflow: hidden; background: #eee8dc;
+  -webkit-font-smoothing: antialiased; }
+.spread { width: 2400px; height: 1600px; display: flex; position: relative; }
+.page { position: relative; width: 1200px; height: 1600px; overflow: hidden; flex: none;
+  background-size: cover; color: var(--ink); }
+/* gutter shading so the two leaves read as a bound book */
+.page.left::after, .page.right::after { content: ""; position: absolute; top: 0; bottom: 0; width: 70px; z-index: 90; pointer-events: none; }
+.page.left::after { right: 0; background: linear-gradient(90deg, rgba(0,0,0,0), rgba(70,50,30,.10)); }
+.page.right::after { left: 0; background: linear-gradient(270deg, rgba(0,0,0,0), rgba(70,50,30,.10)); }
+
+.L { position: absolute; transform-origin: center center; }
+.L > img { display: block; width: 100%; height: auto; }
+.sh { filter: var(--shadow); }
+.sh-soft { filter: var(--shadow-soft); }
+.mult { mix-blend-mode: multiply; }
+
+/* header / folio */
+.jhead { position: absolute; top: 70px; left: 92px; right: 92px; display: flex; align-items: center; gap: 18px;
+  font: 400 19px/1 var(--font-type); letter-spacing: .32em; color: #5b5146; z-index: 40; }
+.jhead .rule { flex: 1; height: 1px; background: #8d8172; opacity: .55; }
+.page.right .jhead { flex-direction: row-reverse; }
+.folio { position: absolute; bottom: 52px; font: 400 17px var(--font-type); letter-spacing: .2em; color: #7b6f61; z-index: 40; }
+.page.left .folio { left: 92px; } .page.right .folio { right: 92px; }
+
+/* titles */
+.title { font-family: var(--font-display); font-weight: 500; letter-spacing: .06em; line-height: .9; color: #24252d;
+  font-variation-settings: "opsz" 96; white-space: nowrap; }
+.kicker { font: 400 22px/1.3 var(--font-type); letter-spacing: .3em; color: #6d6155; text-transform: uppercase; white-space: nowrap; }
+.hand { font-family: var(--font-hand); color: #3a3530; line-height: 1.5; white-space: nowrap; }
+.note { font-family: var(--font-note); color: #3c3a40; line-height: 1.12; }
+.type { font-family: var(--font-type); color: #3d372f; line-height: 1.55; letter-spacing: .04em; }
+.cjk { font-family: var(--font-cjk); }
+
+/* polaroid caption sits inside the rotated wrapper */
+.pol { position: absolute; }
+.pol > img { width: 100%; display: block; }
+.pol .cap { position: absolute; left: 0; right: 0; text-align: center; font-family: var(--font-hand); color: #3a3530; }
+
+/* stamp text overlay (on the empty cream strip the art leaves at the bottom) */
+.stamp { position: absolute; }
+.stamp > img { width: 100%; display: block; }
+.stamp .st { position: absolute; left: 12%; right: 12%; display: flex; justify-content: space-between; align-items: baseline;
+  font-family: var(--font-display); color: #3b3a48; }
+.stamp .st .c { font-size: 1em; letter-spacing: .16em; font-weight: 600; }
+.stamp .st .v { font-size: 1.5em; font-weight: 600; font-style: italic; }
+
+/* ticket stub */
+.ticket { position: absolute; display: flex; font-family: var(--font-type); color: #3a332b; }
+.ticket .main { flex: 1; padding: 18px 26px 16px 30px; position: relative; }
+.ticket .stub { width: 26%; border-left: 2px dashed rgba(90,70,50,.45); padding: 16px 14px; display: flex; flex-direction: column; justify-content: space-between; align-items: center; }
+.ticket .lbl { font-size: 13px; letter-spacing: .3em; opacity: .7; }
+.ticket .route { font-family: var(--font-display); font-weight: 600; font-size: 34px; letter-spacing: .04em; margin: 6px 0 8px; white-space: nowrap; }
+.ticket .row { display: flex; gap: 26px; font-size: 13px; letter-spacing: .14em; }
+.ticket .row b { display: block; font-weight: 400; font-size: 18px; letter-spacing: .06em; margin-top: 3px; }
+.ticket .bar { margin-top: 6px; }
+
+/* vertical local label */
+.vlabel { position: absolute; writing-mode: vertical-rl; text-orientation: upright; display: flex; align-items: center;
+  font-family: var(--font-cjk); font-weight: 700; color: #fbf6ec; padding: 26px 14px 34px; letter-spacing: .18em; }
+.vlabel .sub { font: 400 15px var(--font-type); writing-mode: vertical-rl; text-orientation: mixed; letter-spacing: .3em; margin-top: 18px; opacity: .85; }
+
+/* tag on string */
+.tag { position: absolute; font-family: var(--font-type); color: #3a332b; text-align: center; }
+
+.washi { position: absolute; opacity: .86; mix-blend-mode: multiply; }
+.svgL { position: absolute; overflow: visible; }

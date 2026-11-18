@@ -1,0 +1,109 @@
+{
+  "title": "Travel Journal",
+  "year": "2026",
+  "pageWidth": 1200,
+  "pageHeight": 1600,
+  "_说明": "所有文字都在这里改。照片文件名在 photos 里改（文件放在 source/photos/）。改完运行 py render.py",
+  "photos": {
+    "japan_tower": "01_japan_1.jpg",
+    "japan_lake": "01_japan_2.jpg",
+    "japan_me": "01_japan_3.jpg",
+    "semporna_jetty": "02_semporna_1.jpg",
+    "semporna_me": "02_semporna_2.jpg",
+    "bali_beach": "03_bali_1.jpg",
+    "bali_cliff": "03_bali_2.jpg",
+    "dali_lamb": "04_dali_1.jpg",
+    "dali_peak": "04_dali_2.jpg",
+    "sz_clouds": "05_shenzhenbay_1.jpg",
+    "sz_gold": "05_shenzhenbay_2.jpg",
+    "sz_tripod": "05_shenzhenbay_3.jpg",
+    "jeju_path": "06_korea_1.jpg",
+    "jeju_rocks": "06_korea_2.jpg",
+    "jeju_wall": "06_korea_3.jpg"
+  },
+  "cover": {
+    "kicker": "A Scrapbook of Six Journeys",
+    "line1": "TRAVEL",
+    "line2": "JOURNAL",
+    "hand": "keep the little things",
+    "places_line": "Japan · Semporna · Bali · Dali · Shenzhen Bay · Jeju"
+  },
+  "contents": {
+    "title": "Contents",
+    "hand": "six places, in the order they happened",
+    "intro": "Tickets, stamps and the photographs I kept."
+  },
+  "closing": {
+    "title": "Until next time",
+    "hand": "the map is still open",
+    "note": "Travel Journal · 2026 · six journeys"
+  },
+  "place": {
+    "japan": {
+      "no": "01", "title": "JAPAN", "label": "日本", "label_sub": "NIPPON",
+      "hand": "Good things happen here.",
+      "coords": "35°21′N · 138°43′E", "region": "HONSHU",
+      "notes": ["cold air, clear sky", "Fuji all morning", "the tower glowing at night"],
+      "cap_a": "Fuji-san &amp; me", "cap_b": "the lake, very still", "cap_c": "Tokyo, after dark",
+      "journal": "Woke before the sun. The mountain stayed out all day — no clouds at all.",
+      "stamp": {"country": "NIPPON", "value": "84"},
+      "postmark": {"top": "FUJIYOSHIDA", "bottom": "JAPAN · 2026", "icon": "sakura"},
+      "ticket": {"kind": "JR EXPRESS · BOARDING PASS", "from": "TOKYO", "to": "MT. FUJI", "class": "2nd", "seat": "07A", "code": "JP0126"}
+    },
+    "semporna": {
+      "no": "02", "title": "SEMPORNA", "label": "仙本那", "label_sub": "SABAH",
+      "hand": "Water so clear it looks like glass.",
+      "coords": "4°28′N · 118°36′E", "region": "SABAH · BORNEO",
+      "notes": ["pink flowers on every rail", "turtles under the jetty", "salt on everything"],
+      "cap_a": "on the deck", "cap_b": "the flower jetty", "cap_c": "blue, then bluer",
+      "journal": "Walked the jetty three times just to look down at the water.",
+      "stamp": {"country": "MALAYSIA", "value": "50 sen"},
+      "postmark": {"top": "SEMPORNA", "bottom": "SABAH · 2026", "icon": "turtle"},
+      "ticket": {"kind": "BOAT TRANSFER · ISLAND HOP", "from": "KOTA KINABALU", "to": "SEMPORNA", "class": "deck", "seat": "B12", "code": "MY0226"}
+    },
+    "bali": {
+      "no": "03", "title": "BALI", "label": "巴厘岛", "label_sub": "PULAU DEWATA",
+      "hand": "Golden hours and salt air.",
+      "coords": "8°45′S · 115°28′E", "region": "NUSA PENIDA",
+      "notes": ["the T-rex cliff", "white sand, loud surf", "frangipani everywhere"],
+      "cap_a": "Kelingking", "cap_b": "from the top of the stairs", "cap_c": "the beach below",
+      "journal": "Steep steps, wild water, and the bluest edge of the island.",
+      "stamp": {"country": "INDONESIA", "value": "Rp 5000"},
+      "postmark": {"top": "NUSA PENIDA", "bottom": "BALI · 2026", "icon": "frangipani"},
+      "ticket": {"kind": "FAST BOAT · ONE WAY", "from": "SANUR", "to": "NUSA PENIDA", "class": "open", "seat": "21", "code": "ID0326"}
+    },
+    "dali": {
+      "no": "04", "title": "DALI", "label": "大理", "label_sub": "苍山 · 洱海",
+      "hand": "Slow days under Cangshan.",
+      "coords": "25°36′N · 100°16′E", "region": "YUNNAN",
+      "notes": ["wind off the lake", "a lamb that would not sit still", "the peak turning gold"],
+      "cap_a": "a new friend", "cap_b": "Cangshan at first light", "cap_c": "wide sky, wide field",
+      "journal": "No plans. Just the mountain, the lake, and a lot of sky.",
+      "stamp": {"country": "CHINA", "value": "1.20"},
+      "postmark": {"top": "DALI · YUNNAN", "bottom": "CHINA · 2026", "icon": "pagoda"},
+      "ticket": {"kind": "HIGH-SPEED RAIL · D-TRAIN", "from": "KUNMING", "to": "DALI", "class": "2nd", "seat": "06F", "code": "CN0426"}
+    },
+    "shenzhenbay": {
+      "no": "05", "title": "SHENZHEN BAY", "label": "深圳湾", "label_sub": "SHENZHEN",
+      "hand": "Stay until the sky changes.",
+      "coords": "22°29′N · 113°56′E", "region": "GUANGDONG",
+      "notes": ["before sunset", "golden hour", "after the light goes"],
+      "cap_a": "waiting for the light", "cap_b": "golden hour", "cap_c": "violet, after",
+      "journal": "Set up the tripod early. Watched blue turn gold, then purple.",
+      "stamp": {"country": "CHINA", "value": "2.00"},
+      "postmark": {"top": "SHENZHEN BAY", "bottom": "GUANGDONG · 2026", "icon": "sun"},
+      "ticket": {"kind": "METRO · LINE 2", "from": "FUTIAN", "to": "SHENZHEN BAY", "class": "std", "seat": "—", "code": "SZ0526"}
+    },
+    "jeju": {
+      "no": "06", "title": "JEJU", "label": "济州岛", "label_sub": "제주",
+      "hand": "Wind, stone and tangerines.",
+      "coords": "33°29′N · 126°31′E", "region": "JEJU ISLAND · KOREA",
+      "notes": ["black stone, white surf", "green paths by the sea", "a wall that said YES"],
+      "cap_a": "black sand", "cap_b": "the green path", "cap_c": "YES",
+      "journal": "Volcanic island, gentle people, and a tangerine in every pocket.",
+      "stamp": {"country": "KOREA", "value": "₩ 430"},
+      "postmark": {"top": "JEJU ISLAND", "bottom": "KOREA · 2026", "icon": "tangerine"},
+      "ticket": {"kind": "BOARDING PASS · FLIGHT", "from": "SEOUL", "to": "JEJU", "class": "Y", "seat": "23C", "code": "KR0626"}
+    }
+  }
+}
